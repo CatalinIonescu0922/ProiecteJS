@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+ <div class="mega-container"> 
+    <div class="back-to-top"> 
+        <h1 class="back-top"> <i class="fas fa-chevron-up"></i> </h1>
+        <!-- <i class="fas fa-angle-double-up"></i> -->
+    </div>
+    <div class="nav">
+            <img src="logo.png" alt="" class="logo">
+        <ul class="navigation">
+            <li class="nav-list">Home</li>
+            <li class="nav-list">Creearea unui element</li>
+            <li class="nav-list"> Stergerea unui element </li>
+            <li class="nav-list"> Parcurgerea listei</li>
+        </ul>
+         <a href="https://www.instagram.com/cata_ionescu0610/" target="new-blank" class="get-in-touch">
+            GET IN TOUCH
+        </a>
+    </div>
+    <div class="main">
+        <div class="container1">
+            <h1 class="main-text"> BUILD YOUR PROJECT WITH PROGRAMING </h1>
+            <h2 class="citat"> The only way to learn a new programming language is by writing programs in it. </h2>
+            <a href="#" class="see-problems"> Vezi problemele mele</a>
+        </div>
+    </div>
+    <div id="creare-element">
+          <h1 class="titlu">
+            CREAREA UNUI ELEMENT NOU 
+          </h1>
+          <p class="para-1"> Nodurile sunt variabile dinamice. Crearea unui nou nod înseamnă crearea unei variabile dinamice. Acest lucru se face cu ajutorul operatorului C++ new, care are ca rezultat adresa variabilei nou create. Aceasta va fi memorată într-un pointer de tip nod *. Să-l numim p: nod * p = new nod;
+            Nodurile sunt variabile de tip structură, cu câmpurile info și urm. Accesul la câmpuri se va face prin intermediul pointerilor, cu ajutorul operatorului ->, astfel: p->info și p->urm. Accesul la câmpuri se poate face și după dereferențierea pointer-ului: (* p).info și (* p).urm.
+            Nodul nou creat va fi inclus într-o listă. p->urm va memora adresa următorului element, sau NULL dacă nu există următorul element!
+             </p>
+             <div class="middle">
+                <img src="poza1.png" alt="" class="poza1">
+                <p class="para-2"> Ne imaginăm lista în felul următor; săgețile simbolizează legăturile dintre nodurile listei. Vârful săgeții reprezintă elementul următor. Ultimul element nu are săgeată. Valoarea corespunzătoare din câmpul urm este NULL </p>
+             </div>
+             <p class="para-3">În exemplul de mai sus au loc următoarele relații:<br>
+
+                ->valoarea pointerului prim este adresa elementului cu valoarea 12; <br>
+                ->prim->info==12<br>
+                ->prim->urm->info==46<br>
+                ->prim->urm este adresa elemenului cu valoarea 46<br>
+                ->prim->urm->urm==p<br>
+                ->p->info==59<br>
+                ->p->urm->urm==t<br>
+                ->p->urm->urm->urm==p->info<br>
+                ->t->info==17<br>
+                ->t->urm->info==25<br>
+                ->t->urm->urm->info==18<br>
+                ->t->urm->urm->urm==NULL<br>
+                ->t->urm->urm->urm->info nu există.<br> Rezultatul acestei expresii este impredictibil!</p>
+    </div>
+    <div class="adaugare-element">
+        <h1 class="titlu-2">
+            Adăugarea unui element la finalul listei
+        </h1>
+     <div class="middle-2">
+            <p class="para-4">
+                Parametru prim este transmis prin referință pentru a trata corespunzător situația când lista este vidă. În acesta caz, valoare de intrare a lui prim este NULL, iar valoarea de ieșire este adresa primului element al listei – element nou creat.
+                Practic, vom trata două situații:
+                dacă prim este NULL, creăm un nod nou, care va fi primul și totodată ultimul element al listei, memorăm în el valoarea dorită și prim devine adresa acestui nod;
+                în caz contrar, identificăm ultimul nod al listei și nodul nou creat devine succesor al ultimului element și totodată ultimul element al listei.
+            </p>
+            <img src="poza2.png" alt="" class="poza2">  
+    </div>
+
+    </div>
+    <div class="stergere-element">
+        <h1 class="titlu-3">
+            Ștergerea unui element
+        </h1>
+        <p class="para-5"> 
+            Ștergerea unui element al listei constă în două etape: ștergerea propriu-zisă a variabilei dinamice în care este stoca nodul de șters și refacerea legăturilor, astfel încât lista să fie consistentă. Tehnic, modul de ștergere diferă după cum nodul de șters este primul din listă sau nu.
+            Dacă ștergem primul element al listei vom proceda astfel:
+            memorăm adresa primului nod într-un pointer auxiliar: nod * t = prim;
+            nodul de după prim devine primul nod al listei: prim = prim->urm;
+            ștergem variabila adresată de t: delete t;
+            Dac ștergem un element oarecare al listei, trebuie să cunoaștem într-un pointer oarecare, să spunem p, adresa elementului din fața nodului de șters. Acest lucru este necesar pentru refacerea corectă a legăturilor dintre elementele listei:
+            vom șterge elementul situat în listă după cel cu adresa memorată în p, adică vom șterge p->urm;
+            memorăm adresa nodului de șters înt-un pointer auxiliar: nod * t = p->urm;
+            corectăm adresa elementului de după p: p->urm = t->urm;
+            ștergem variabila adresată de t: delete t;   
+        </p>
+    </div>
+    <div class="ceva-fun">
+        <h1 class="titlu-fun"> Acum ca ai terminat tot, hai sa iti testezi aptitudinile cu un mic test  </h1>
+        <button class="test"> Testeaza-ti aptitudinile <button>
+    </div>
+    <div class="footer">
+        <h2 class="descriere"> Proiect realizat de Ionescu Catalin  </h2> 
+        <div class="social "> 
+           <a href="https://www.instagram.com/cristiano/" class="insta" target="new-blank"> <i class="fab fa-instagram"></i> </a>
+           <a href="https://www.facebook.com/Cristiano" class="facebook" target="new-blank"><i class="fab fa-facebook-square"></i></a>
+           <a href="https://www.youtube.com/channel/UCqrILQNl5Ed9Dz6CGMyvMTQ" class="youtube" target="new-blank"> <i class="fab fa-youtube"></i> </a>
+        </div>
+        <h3 style="text-align: center; padding-bottom: 2rem;">  Copyright &copy;2021 Proiect realizat de Ionescu Catalin, ajutat putin de Biciu</h3>
+        <h3 style="text-align: center;"> All rights dezerved?</h3>
+    </div>
+ </div>
+ <div class="imageslideshow">
+    <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <div class="inchide" onclick="nusevedefunction()"><i class="far fa-times-circle"></i></div>
+          <img src="problema1.png" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <div class="inchide" onclick="nusevedefunction()"><i class="far fa-times-circle"></i></div>
+          <img src="problema2.png" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <div class="inchide" onclick="nusevedefunction()"><i class="far fa-times-circle"></i></div>
+          <img src="problema3.png" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <div class="inchide" onclick="nusevedefunction()"><i class="far fa-times-circle"></i></div>
+            <img src="problema4.png" style="width:100%">
+            <div class="text">Caption four</div>
+          </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next1" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+ 
+ </div>
+        <div class="test-wrapper">
+            <div class="felicitari"> <h1> Felicitari </h1>  <h2 class="duration">  </h2> <button class="detail"> Detali  </button> </div>
+                <div class="detali-main"> <h1>sunt mate boss</h1> </div>
+                <div class="start"> <button class="start-btn"> Start </button> </div>
+                <div class="corect"> <h1 class="corect-h1"> Corect</h1> <h1 class="scor">0</h1> </div>
+            <div class="container">
+                <div class="intrebare">
+                        <h1 class="main-intrebare">Din ce este alcatuita o lista simplu inlantuita?</h1>
+                </div>
+                <div class="respunsuri">
+                        <h2 class="ras-1" style="margin-top: .5rem;">Noduri</h2>
+                        <h2 class="ras-1">Ramuri</h2>
+                        <h2 class="ras-1"> Variabile </h2>
+                        <h2 class="ras-1"> Siruri </h2>
+                </div>
+                <button class="next">urmatoarea intrebare </button>
+            </div>
+         </div>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ==" crossorigin="anonymous"></script>
+</body>
+</html>
