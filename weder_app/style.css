@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: sans-serif;
+}
+.container{
+    width: 50%;
+    margin: auto;
+    background: linear-gradient(to bottom , rgba(0,0,0,.3), rgba(0,0,0,.8)) , url("fundal.jpg");
+    background-size: cover;
+    background-position: top center;
+    height: 100vh;
+}
+.main-wheather {
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2.5rem;
+}
+.search-city{
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    border-radius: 16px 0px 16px 0px;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid rgb(180, 39, 185);
+    margin-bottom: 2rem;
+    color:rgb(0, 0, 0);
+    background-color: rgba(255,255,255,.6);
+    transition: .25s ease-in-out;
+}
+.search-city:focus {
+    background-color: rgba(255,255,255);
+}
+.city-time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.city-time .city {
+    margin-bottom: .5rem;
+    font-size: 1.7rem;
+}
+.city-time .time {
+    font-size: .8rem;
+}
+.exact-temperature{
+    font-size: 4.5rem;
+    font-weight: 900;
+    text-shadow: 2px 8px rgba(0,0,0,.7);
+}
+.temperature {
+    margin-bottom: 1.5rem;
+}
+.degree-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.degree-description .descriprion{
+    font-weight: 900;
+    text-shadow: 1px 4px rgba(0,0,0,.6);
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+.degree-description .degree-interval {
+    font-weight: 300;
+    font-size: 1.7rem;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+</html>
+<body>
+    <div class="custom-select">
+        <select  id="chose-your" onchange=" gamemodfunct(this)">
+            <option value="2player"> play multiplayer </option>
+            <option value="bot"> play with bot  </option>
+        </select>
+    </div>
+    <div class="player-score" >
+        <h2 class="player-1"> X Jucatorul 1  : <span class="score-1">0</span> </h2>
+        <h2 class="player-2"> O Jucatorul 2 : <span class="score-2">0</span></h2>
+      </div>
+    <div class="container">
+        <div class="win-text">Lets play</div>
+        <div class="board">
+            <div class="cell cell-0" ></div>
+            <div class="cell cell-1" ></div>
+            <div class="cell cell-2" ></div>
+            <div class="cell cell-3" ></div>
+            <div class="cell cell-4" ></div>
+            <div class="cell cell-5" ></div>
+            <div class="cell cell-6" ></div>
+            <div class="cell cell-7" ></div>
+            <div class="cell cell-8" ></div>
+        </div>
+        <button class="reset">Reset</button>
+    </div>
+    <script src="app.js"> </script>
+</body>
+</html>

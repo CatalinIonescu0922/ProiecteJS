@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="black-jack-main-container">
+        <div class="bj-container-1">
+          <h2 class="bj-title"> Challenge 5: Black Jack </h2>
+          <h3 class="bj-win-lose">Let's play </h3>
+        </div>
+        <div class="bj-play-container">
+           <div class="your-container">
+               <h2 class="your-score"> player1  :<span class="score"> 0</span></h2>
+           </div>
+
+           <div class="your2-container">
+             <h2 class="bot-score"> player2  :<span class="your2-score"> 0</span></h2>
+           </div>
+        </div>
+        <div class="bj-buttons">
+          <div class="player1-controls">
+            <button class="hit-btn">Hit </button>
+            <button class="stand-btn">  Stand </button>
+          </div>
+           <button class="reset-blj"> Deal </button>
+          <div class="player2-control">
+            <button class="hit2-btn"> Hit  </button>
+            <button class="stand2-btn"> Stand</button>
+          </div>
+        </div>
+        <div class="score-table">
+          <table>
+            <tr>
+              <th> Player1 wins </th>
+              <th> Player2 wins</th>
+              <th>Draws</th>
+
+            </tr>
+            <tr>
+              <td> <span class="win1-span">0</span></td>
+              <td> <span class="win2-span">0</span></td>
+              <td> <span class="draws-span">0</span></td>
+            </tr>
+          </table>
+        </div>
+  </div>
+  <button class="settings"> game details </button>
+  <div class="bj-owerall-score">
+     <div class="over-score">
+        <h2 class="title">
+          Overall score and details of the game 
+        </h2>
+        <ul class="game-datails"> 
+          <li class="player-1-win">  </li>
+          <li class="player-2-win"> </li>
+          <li class="player-draws"> </li>
+        </ul>
+        <button class="reset-localstorage">Reset</button> 
+     </div>
+  </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
